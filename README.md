@@ -6,8 +6,8 @@ La base de datos utiliza procedimientos almacenados, el script para su creacion 
 Para dar de alta el primer usuario se puede usar el procedimiento: `exec alta 'Astrophel', 'Daleth', 'Aleph'`
 
 El backend (Entities,Data,Business) fue desarrollado con .Net Core 8
-Para iniciarlo desde el directorio Buisiness ejecutar `dontnet run`
+Para iniciarlo desde el directorio Buisiness ejecutar `dotnet run`
 
 El frontend (Presentation) utiliza Angular 16, el servidor de desarollo se puede inicar con `ng serve`
 
-Busque que la aplicacion fuera intuitiva, en caso de alguna duda sobre el funcionamiento puede contactarme via correo: daniel.lucario.p@outlook.com
+Busqué que la aplicación fuera intuitiva, en caso de alguna duda sobre el funcionamiento puede contactarme vía correo: daniel.lucario.p@outlook.com
