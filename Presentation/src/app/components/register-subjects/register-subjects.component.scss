@@ -1,0 +1,63 @@
+@import '../../../styles.scss';
+
+.data-student {
+  display: flex;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.data-card {
+  margin-right: 1rem;
+
+  .label {
+    color: $color-accent;
+    font-size: 0.75rem;
+  }
+
+  .value {
+    min-height: 1rem;
+
+    &.cost {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.125rem;
+    }
+  }
+}
+
+.registered-subjects {
+  margin-top: 1rem;
+
+  .subject {
+    display: flex;
+    margin-bottom: 1rem;
+
+    .id {
+      font-size: 1.5rem;
+      padding-right: 0.5rem;
+      margin-right: 0.5rem;
+      border-right: 1px dashed $color-dark;
+    }
+
+    .col {
+      .nombre {
+        font-weight: 600;
+      }
+
+      .costo {
+        color: $color-accent;
+      }
+    }
+  }
+
+  .total {
+    border-top: 1px solid $color-standard-bg;
+    padding-top: 1rem;
+  }
+}
+
+.subject-option {
+  .cost {
+    font-size: .75rem;
+  }
+}

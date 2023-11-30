@@ -1,0 +1,13 @@
+@import '../../../styles.scss';
+
+form {
+  padding: 2rem 1rem;
+  border-radius: 0.25rem;
+  background-color: $color-standard-bg;
+  width: fit-content;
+  width: 216px;
+
+  mat-form-field {
+    width: 100%;
+  }
+}

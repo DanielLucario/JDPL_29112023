@@ -1,0 +1,37 @@
+@import '../../../styles.scss';
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+
+  .link {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: $color-standard-bg;
+    border-radius: 0.25rem;
+
+    :hover {
+      cursor: pointer !important;
+    }
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 1rem;
+
+      .material-symbols-outlined {
+        font-size: 5rem !important;
+      }
+    }
+
+    .name {
+      letter-spacing: 0.125rem;
+      border-top: 1px dashed $color-dark;
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+    }
+  }
+}

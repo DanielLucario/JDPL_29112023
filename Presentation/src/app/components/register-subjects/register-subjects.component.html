@@ -1,0 +1,55 @@
+<div class="container">
+  <h1>Registrar materias</h1>
+  <button mat-button color="primary" routerLink="/home">
+    <mat-icon class="material-symbols-outlined">home</mat-icon>
+    Ir a inicio
+  </button>&nbsp;
+  <button mat-button color="primary" routerLink="/students">
+    <mat-icon class="material-symbols-outlined">groups</mat-icon>
+    Ir a Alumnos
+  </button>
+  <div class="data-student">
+    <div class="data-card">
+      <div class="label">Nombre</div>
+      <div class="value">{{_student.nombre}}</div>
+    </div>
+    <div class="data-card">
+      <div class="label">Apellido paterno</div>
+      <div class="value">{{_student.apellidoPaterno}}</div>
+    </div>
+    <div class="data-card">
+      <div class="label">Apellido materno</div>
+      <div class="value">{{_student.apellidoMaterno}}</div>
+    </div>
+    <div class="data-card" *ngIf="_total">
+      <div class="label">Costo total de las materias</div>
+      <div class="value cost">MXN {{_total| number:'.2'}}</div>
+    </div>
+  </div>
+  <div class="actions">
+    <mat-form-field>
+      <mat-label>Materias</mat-label>
+      <mat-select [(ngModel)]="_idMateria">
+        <mat-option class="subject-option" *ngFor="let subject of _subjects" [value]="subject.idMateria">
+          <div class="name">{{subject.nombre}}</div>
+          <div class="cost">NXN {{subject.costo| number:'.2'}}</div>
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-flat-button color="primary" (click)="registerSubject()">
+      Registrar
+    </button>
+  </div>
+  <div class="registered-subjects" *ngIf="_registered.length>0">
+    <div class="subject" *ngFor="let subject of _registered">
+      <div class="id">{{subject.idMateria}}</div>
+      <div class="col">
+        <div class="nombre">{{subject.nombre}}</div>
+        <div class="costo">MXN {{subject.costo| number:'.2'}}</div>
+      </div>
+    </div>
+    <div class="total">
+      Total: <b>MXN {{_total|number:'.2'}}</b>
+    </div>
+  </div>
+</div>

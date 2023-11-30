@@ -1,0 +1,36 @@
+@import '../../../styles.scss';
+
+.students {
+  padding: 1rem;
+  background-color: $color-standard-bg;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .student {
+    padding: 0.5rem 1rem;
+    background-color: $color-standard-bg;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+
+    .header {
+      border-bottom: 1px $color-accent dashed;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+
+      .id {
+        color: $color-accent;
+        letter-spacing: 0.25rem;
+      }
+    }
+
+    .buttons {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

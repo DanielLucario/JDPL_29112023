@@ -3,7 +3,35 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Presentation", "Presentation\Presentation.esproj", "{6B793498-08C8-45A7-9B6C-CBD1A0B6DF70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{52A4B635-B639-400A-9507-8C7390BD83AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{4927572F-44F8-457F-9471-BDE024B8E819}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{54B57381-68AC-405F-AB90-811AFFF56126}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4927572F-44F8-457F-9471-BDE024B8E819} = {4927572F-44F8-457F-9471-BDE024B8E819}
+		{52A4B635-B639-400A-9507-8C7390BD83AD} = {52A4B635-B639-400A-9507-8C7390BD83AD}
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Presentation", "Presentation\", "{2368C116-C8CE-4C1F-A57E-6539D14C2F84}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_62250"
+		Debug.AspNetCompiler.PhysicalPath = "Presentation\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62250\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_62250"
+		Release.AspNetCompiler.PhysicalPath = "Presentation\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62250\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "62250"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +39,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6B793498-08C8-45A7-9B6C-CBD1A0B6DF70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B793498-08C8-45A7-9B6C-CBD1A0B6DF70}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B793498-08C8-45A7-9B6C-CBD1A0B6DF70}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{6B793498-08C8-45A7-9B6C-CBD1A0B6DF70}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B793498-08C8-45A7-9B6C-CBD1A0B6DF70}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6B793498-08C8-45A7-9B6C-CBD1A0B6DF70}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{52A4B635-B639-400A-9507-8C7390BD83AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52A4B635-B639-400A-9507-8C7390BD83AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52A4B635-B639-400A-9507-8C7390BD83AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52A4B635-B639-400A-9507-8C7390BD83AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4927572F-44F8-457F-9471-BDE024B8E819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4927572F-44F8-457F-9471-BDE024B8E819}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4927572F-44F8-457F-9471-BDE024B8E819}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4927572F-44F8-457F-9471-BDE024B8E819}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54B57381-68AC-405F-AB90-811AFFF56126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54B57381-68AC-405F-AB90-811AFFF56126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54B57381-68AC-405F-AB90-811AFFF56126}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54B57381-68AC-405F-AB90-811AFFF56126}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2368C116-C8CE-4C1F-A57E-6539D14C2F84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2368C116-C8CE-4C1F-A57E-6539D14C2F84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2368C116-C8CE-4C1F-A57E-6539D14C2F84}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2368C116-C8CE-4C1F-A57E-6539D14C2F84}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,17 @@
+@import '../../../styles.scss';
+
+table {
+  border-collapse: collapse;
+  border-radius: 0.25rem;
+  overflow: hidden;
+
+  tr th {
+    background-color: $color-standard-bg;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  tr td {
+    padding: 0.5rem 1rem;
+  }
+}

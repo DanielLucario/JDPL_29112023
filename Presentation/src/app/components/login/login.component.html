@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Control de acceso</h1>
+  <form [formGroup]="form" (submit)="login()">
+    <b>Bienvenido</b>
+    <p>
+      Use sus credenciales para acceder. Solo se aceptan caracteres alfabéticos
+    </p>
+    <mat-form-field>
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Apellido paterno</mat-label>
+      <input matInput formControlName="apellidoPaterno">
+    </mat-form-field>
+    <div class="buttons">
+      <button type="submit" mat-flat-button color="primary">ACCEDER</button>
+    </div>
+  </form>
+</div>

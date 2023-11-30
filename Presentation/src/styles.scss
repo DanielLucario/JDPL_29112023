@@ -1,0 +1,105 @@
+@use "sass:map";
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+//$Presentation-primary: mat.define-palette(mat.$indigo-palette);
+//$Presentation-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+//$Presentation-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+// $Presentation-theme: mat.define-light-theme((color: (primary: $Presentation-primary,
+//         accent: $Presentation-accent,
+//         warn: $Presentation-warn,
+//       )));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+// @include mat.all-component-themes($Presentation-theme);
+
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// colors
+$color-dark: rgb(15, 15, 15);
+$color-light: #ededed;
+$color-black: black;
+$color-white: white;
+
+$dark-primary: mat.define-palette(mat.$blue-palette, 900);
+$dark-accent: mat.define-palette(mat.$gray-palette, 300);
+$dark-warn: mat.define-palette(mat.$red-palette, 800);
+$dark-theme: mat.define-light-theme((color: (primary: $dark-primary,
+        accent: $dark-accent,
+        warn: $dark-warn,
+      ),
+    ));
+
+@include mat.all-component-themes($dark-theme);
+
+$dark-color-config: mat.get-color-config($dark-theme);
+
+$accent-palette: map.get($dark-color-config, "accent");
+$color-accent: mat.get-color-from-palette($accent-palette, 600);
+
+$color-standard-bg: rgba($color: $color-accent,
+    $alpha: 0.15,
+  );
+
+// classess
+
+.mat-app-background {
+  // background-color: $color-dark;
+  // color: $color-light;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 48 !important;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.actions {
+  margin-bottom: 1rem;
+  background-color: $color-standard-bg;
+  padding: 1rem;
+  padding-bottom: 0rem;
+  border-radius: 0.25rem;
+
+  mat-form-field,
+  button {
+    margin-right: 1rem;
+  }
+
+  button {
+    margin-bottom: 1rem;
+  }
+}
